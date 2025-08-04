@@ -426,17 +426,12 @@
                             </div>
                        
                     </div>
-                        </div>
                     </div>
             </div>
 
                 </div>
                 <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
+<!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -445,7 +440,10 @@
                 </div>
             </footer>
             <!-- End of Footer -->
-
+            </div>
+            <!-- End of Main Content -->
+            
+            
         </div>
         <!-- End of Content Wrapper -->
 
