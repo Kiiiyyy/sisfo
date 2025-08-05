@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id('id_user');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('foto_profil')->unique();
-            $table->string('kontak')->unique();
+            $table->string('foto_profile')->nullable();
+            $table->string('contact')->nullable();
+            $table->rememberToken();
+            $table->timesemailtamps();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
