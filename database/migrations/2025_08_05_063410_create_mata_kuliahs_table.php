@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliahs', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_mk');
+            $table->string('kode_mk')->unique();
+            $table->string('nama_mk');
+            $table->integer('sks')->default(0);
+            $table->integer('semester')->default(1);
+            $table->foreignId('id_dosen')->references('id_dosen')->on('dosens')->onDelete('cascade');
             $table->timestamps();
         });
     }
