@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('tanggal')->nullable();
             $table->foreignId('id_admin')->references('id_admin')->on('admins')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

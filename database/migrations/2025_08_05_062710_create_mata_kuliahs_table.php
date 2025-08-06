@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('semester')->default(1);
             $table->foreignId('id_dosen')->references('id_dosen')->on('dosens')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
