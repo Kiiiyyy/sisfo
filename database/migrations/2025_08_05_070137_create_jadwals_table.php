@@ -17,7 +17,7 @@ return new class extends Migration
             $table->time('jam_mulai');
             $table->time('jam_selesai');
             $table->string('ruang_kelas');
-            $table->foreignId('id_mk')->references('id_mk')->on('mata_kuliah')->onDelete('cascade');
+            $table->foreignId('id_mk')->references('id_mk')->on('mata_kuliahs')->onDelete('cascade');
             $table->foreignId('id_dosen')->references('id_dosen')->on('dosens')->onDelete('cascade');
             $table->timestamps();
         });
