@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('id_dosen')->references('id_dosen')->on('dosens')->onDelete('cascade');
             $table->foreignId('id_mk')->references('id_mk')->on('mata_kuliahs')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

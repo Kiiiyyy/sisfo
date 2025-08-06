@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('id_tugas')->references('id_tugas')->on('tugas')->onDelete('cascade');
             $table->foreignId('id_mahasiswa')->references('id')->on('penggunas')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
