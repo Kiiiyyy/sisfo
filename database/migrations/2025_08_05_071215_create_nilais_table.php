@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('uts');
             $table->string('uas');
             $table->string('nilai_akhir');
-            $table->foreignId('id_mahasiswa')->references('id')->on('penggunas')->onDelete('cascade');
-            $table->foreignId('id_mk')->references('id')->on('mata_kuliahs')->onDelete('cascade');
+            $table->foreignId('id_mahasiswa')->references('id_mahasiswa')->on('students')->onDelete('cascade');
+            $table->foreignId('id_mk')->references('id_mk')->on('mata_kuliahs')->onDelete('cascade');
             $table->timestamps();
         });
     }
