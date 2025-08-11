@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class KRS extends Model
+class Alumni extends Model
 {
     //
-    protected $primaryKey = 'id_krs';
+    protected $primaryKey = 'id_alumni';
 
     public function student()
     {
         return $this->belongsTo(Student::class, 'id_mahasiswa', 'id_mahasiswa');
     }
 
-    public function matakuliah()
+    public function partisipasiAlumni()
     {
-        return $this->belongsTo(Mata_kuliah::class, 'id_mk', 'id_mk');
+        return $this->hasOne(Partisipasi_alumni::class, 'id_alumni', 'id_alumni');
     }
 
 }

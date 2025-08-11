@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -18,6 +19,8 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+    protected $primaryKey = 'id_user';
     protected $fillable = [
         'name',
         'email',
@@ -46,5 +49,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function admin() {
+        return $this->hasOne(Admin::class, 'id_user', 'id_user');
+    }
+
+     public function dosen()  {
+        return $this->hasOne(Dosen::class, 'id_user', 'id_user');
+    }
+
+    public function student() {
+        return $this->hasOne(Student::class, 'id_user', 'id_user');
     }
 }

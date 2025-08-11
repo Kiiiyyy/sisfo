@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class KRS extends Model
+class Nilai extends Model
 {
     //
-    protected $primaryKey = 'id_krs';
+    protected $primaryKey = 'id_nilai';
 
     public function student()
     {
